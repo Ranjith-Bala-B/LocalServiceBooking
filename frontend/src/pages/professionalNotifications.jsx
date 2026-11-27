@@ -2,9 +2,9 @@ import { useState } from "react";
 
 function ProfessionalNotifications(){
     const[notifications,setNotifications]=useState([
-        {id:1,message:"New Electrical Repair request received",date:"26 Nov 2026",read:false},
-        {id:2,message:"Your Plumbing booking has been confirmed",date:"25 Nov 2026",read:false},
-        {id:3,message:"Customer completed the Home Cleaning service",date:"24 Nov 2026",read:true}
+        {id:1,message:"New Electrical Repair request received.",date:"26 Nov 2026",read:false},
+        {id:2,message:"Your Plumbing booking has been confirmed.",date:"25 Nov 2026",read:false},
+        {id:3,message:"Customer completed the Home Cleaning service.",date:"24 Nov 2026",read:true}
     ]);
 
     const markRead = (id)=>{

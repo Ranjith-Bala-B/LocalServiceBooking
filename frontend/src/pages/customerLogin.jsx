@@ -1,30 +1,43 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
-function CustomerLogin(){
-    const[email,setEmail]=useState("");
-    const[pass,setPass]=useState("");
+function CustomerLogin() {
+    const [email, setEmail] = useState("");
+    const [pass, setPass] = useState("");
+    const navigate = useNavigate();
 
-    const print = (e)=>{
+    const print = (e) => {
         e.preventDefault();
-        console.log(email,pass);
+        console.log(email, pass);
     };
 
-    return(
-        <div className="bg-gray-100 min-h-screen flex">
-            <div className="bg-white p-8">
-                <h1 className="text-2xl font-bold text-blue-700">NearPro</h1>
-                <h2 className="text-xl mt-5">Customer Login</h2>
-                <p className="text-gray-500 mt-2">Login to find local professionals</p>
+    return (
+        <div className="min-h-screen flex items-center justify-center bg-gray-50 px-4 py-10">
+            <div className="w-full max-w-md rounded-2xl border border-gray-200 bg-white p-8 shadow-sm">
+                <div className="mb-8 text-center">
+                    <h1 className="text-3xl font-bold text-blue-700">NearPro</h1>
+                    <h2 className="mt-3 text-xl font-semibold text-gray-800">Customer Login</h2>
+                    <p className="mt-2 text-sm text-gray-500">Login to find trusted local professionals</p>
+                </div>
 
-                <form onSubmit={print} className="mt-5">
-                    <label>Email</label>
-                    <input className="border p-2 w-full mt-2" placeholder="Enter email" required type="email" value={email} onChange={(e)=>setEmail(e.target.value)} />
+                <form onSubmit={print} className="space-y-5">
+                    <div>
+                        <label className="mb-2 block text-sm font-medium text-gray-700">Email</label>
+                        <input className="w-full rounded-xl border border-gray-300 px-4 py-3 text-gray-800 outline-none focus:border-blue-600 focus:ring-2 focus:ring-blue-100" placeholder="Enter your email" required type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
+                    </div>
 
-                    <label className="block mt-4">Password</label>
-                    <input className="border p-2 w-full mt-2" placeholder="Enter password" required type="password" value={pass} onChange={(e)=>setPass(e.target.value)} />
+                    <div>
+                        <label className="mb-2 block text-sm font-medium text-gray-700">Password</label>
+                        <input className="w-full rounded-xl border border-gray-300 px-4 py-3 text-gray-800 outline-none focus:border-blue-600 focus:ring-2 focus:ring-blue-100" placeholder="Enter your password" required type="password" value={pass} onChange={(e) => setPass(e.target.value)} />
+                    </div>
 
-                    <button type="submit" className="bg-blue-700 text-white p-2 w-full mt-5">Login</button>
+                    <button type="submit" className="w-full rounded-xl bg-blue-700 py-3 font-semibold text-white transition hover:bg-blue-800">Login</button>
                 </form>
+
+                <p className="mt-6 text-center text-sm text-gray-600">
+                    Don't have an account?{" "}
+                    <button type="button" className="font-semibold text-blue-700 hover:underline" onClick={() => navigate("/customerRegister")}>Register</button>
+                </p>
             </div>
         </div>
     );

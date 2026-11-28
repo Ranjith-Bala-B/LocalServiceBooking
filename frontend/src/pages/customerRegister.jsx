@@ -13,7 +13,7 @@ function CustomerRegister() {
     function onSubmit(data) {
         console.log(data);
         alert("Registration successful");
-        navigate("/");
+        navigate("/", { state: data });
     }
 
     return (

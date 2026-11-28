@@ -10,18 +10,6 @@ import FindProfessionals from "./pages/findProfessionals";
 import MyBookings from "./pages/myBookings";
 import MyRequests from "./pages/myRequests";
 
-import ProfessionalAvailability from "./pages/professionalAvailability";
-import ProfessionalBookings from "./pages/professionalBookings";
-import ProfessionalCompletedJobs from "./pages/professionalCompletedJobs";
-import ProfessionalDashboard from "./pages/professionalDashboard";
-import ProfessionalEarnings from "./pages/professionalEarnings";
-import ProfessionalNotifications from "./pages/professionalNotifications";
-import ProfessionalProfile from "./pages/professionalProfile";
-import ProfessionalQuotes from "./pages/professionalQuotes";
-import ProfessionalRequests from "./pages/professionalRequests";
-import ProfessionalReviews from "./pages/professionalReviews";
-import ProfessionalServices from "./pages/professionalServices";
-import ProfessionalSettings from "./pages/professionalSettings";
 
 function App() {
     return (
@@ -37,18 +25,7 @@ function App() {
                 <Route path="/myBookings" element={<MyBookings />} />
                 <Route path="/myRequests" element={<MyRequests />} />
 
-                <Route path="/professionalDashboard" element={<ProfessionalDashboard />} />
-                <Route path="/professionalAvailability" element={<ProfessionalAvailability />} />
-                <Route path="/professionalBookings" element={<ProfessionalBookings />} />
-                <Route path="/professionalCompletedJobs" element={<ProfessionalCompletedJobs />} />
-                <Route path="/professionalEarnings" element={<ProfessionalEarnings />} />
-                <Route path="/professionalNotifications" element={<ProfessionalNotifications />} />
-                <Route path="/professionalProfile" element={<ProfessionalProfile />} />
-                <Route path="/professionalQuotes" element={<ProfessionalQuotes />} />
-                <Route path="/professionalRequests" element={<ProfessionalRequests />} />
-                <Route path="/professionalReviews" element={<ProfessionalReviews />} />
-                <Route path="/professionalServices" element={<ProfessionalServices />} />
-                <Route path="/professionalSettings" element={<ProfessionalSettings />} />
+
             </Routes>
         </BrowserRouter>
     );

@@ -13,14 +13,13 @@ function CustomerLogin() {
     const print = (e) => {
     e.preventDefault();
 
-    if (registerdata && email === registerdata.email && pass === registerdata.password) {
+    if (email=== registerdata.email && pass===registerdata.password) {
         alert("Login successful");
         navigate("/customerDashboard");
     } else {
-        setError("Invalid email or password");
+        setError("Invalid credentials");
     }
 };
-
 
 return (
     <div className="min-h-screen flex items-center justify-center bg-gray-50 px-4 py-10">

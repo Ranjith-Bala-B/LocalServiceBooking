@@ -5,7 +5,7 @@ function MyBookings() {
                 <div className="mb-8">
                     <h1 className="text-3xl font-bold text-blue-700">NearPro</h1>
                     <h2 className="mt-5 text-2xl font-semibold text-gray-800">My Bookings</h2>
-                    <p className="mt-2 text-gray-500">View your confirmed and completed services.</p>
+                    <p className="mt-2 text-gray-500">View your confirmed and completed services</p>
                 </div>
 
                 <div className="overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm">
